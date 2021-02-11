@@ -1,0 +1,7 @@
+{
+    "installOptions" : {
+        "installDependencies" : true,
+        "installFromRepository" : true,
+        "libraryPath" : "C:/Users/gh00497/OneDrive - University of Surrey/Documents/R/win-library/3.6"
+    }
+}

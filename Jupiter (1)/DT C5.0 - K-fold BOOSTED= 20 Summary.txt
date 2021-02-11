@@ -1,0 +1,540 @@
+[1] "Decision Tree - Summary"
+
+Call:
+C5.0.default(x = train_inputs, y = factor(train_expected), trials = boost, rules = TRUE)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Tue Dec 03 08:49:11 2019
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 451 cases (29 attributes) from undefined.data
+
+-----  Trial 0:  -----
+
+Rules:
+
+Rule 0/1: (10/1, lift 1.7)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.833]
+
+Rule 0/2: (3, lift 1.7)
+	breaches <= 0
+	Economicsector_TertiaryDElectricity > 0
+	aClaimantC_BrowerCN > 0
+	->  class 0  [0.800]
+
+Rule 0/3: (3, lift 1.7)
+	Economicsector_TertiaryDElectricity > 0
+	aPresidentC_VeederVV > 0
+	->  class 0  [0.800]
+
+Rule 0/4: (7/1, lift 1.6)
+	Arbitralrules_ICSIDAF > 0
+	breaches > 0
+	->  class 0  [0.778]
+
+Rule 0/5: (7/2, lift 1.4)
+	aClaimantC_BeecheyJ > 0
+	->  class 0  [0.667]
+
+Rule 0/6: (85/32, lift 1.3)
+	Arbitralrules_UNCITRAL > 0
+	breaches <= 0
+	Economicsector_PrimaryBMining <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	aClaimantC_BrowerCN <= 0
+	->  class 0  [0.621]
+
+Rule 0/7: (171/69, lift 1.2)
+	Arbitralrules_UNCITRAL <= 0
+	breaches <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	aClaimantC_BrowerCN <= 0
+	RespondentHDI > 0.672
+	->  class 0  [0.595]
+
+Rule 0/8: (59/7, lift 1.7)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	RespondentHDI <= 0.847
+	->  class 1  [0.869]
+
+Rule 0/9: (66/18, lift 1.4)
+	Economicsector_TertiaryDElectricity > 0
+	aPresidentC_VeederVV <= 0
+	aClaimantC_BrowerCN <= 0
+	aClaimantC_BeecheyJ <= 0
+	->  class 1  [0.721]
+
+Rule 0/10: (30/8, lift 1.4)
+	Arbitralrules_UNCITRAL <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	aClaimantC_BrowerCN <= 0
+	RespondentHDI <= 0.672
+	->  class 1  [0.719]
+
+Rule 0/11: (20/6, lift 1.3)
+	Arbitralrules_UNCITRAL > 0
+	Economicsector_PrimaryBMining > 0
+	->  class 1  [0.682]
+
+Rule 0/12: (25/8, lift 1.3)
+	Economicsector_TertiaryDElectricity <= 0
+	aClaimantC_BrowerCN > 0
+	->  class 1  [0.667]
+
+Default class: 1
+
+-----  Trial 1:  -----
+
+Rules:
+
+Rule 1/1: (9.1/1.3, lift 1.8)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.794]
+
+Rule 1/2: (6.5/1.3, lift 1.6)
+	Arbitralrules_ICSIDAF > 0
+	breaches > 0
+	->  class 0  [0.730]
+
+Rule 1/3: (382.2/199, lift 1.1)
+	breaches <= 0
+	->  class 0  [0.480]
+
+Rule 1/4: (54.1/9, lift 1.5)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	RespondentHDI <= 0.847
+	->  class 1  [0.821]
+
+Rule 1/5: (385.8/168.1, lift 1.0)
+	Arbitralrules_SCC <= 0
+	aRespondentC_SternB <= 0
+	->  class 1  [0.564]
+
+Default class: 1
+
+-----  Trial 2:  -----
+
+Rules:
+
+Rule 2/1: (385.7/187.2, lift 1.1)
+	breaches <= 0
+	->  class 0  [0.515]
+
+Rule 2/2: (65.3/21, lift 1.3)
+	breaches > 0
+	->  class 1  [0.674]
+
+Default class: 1
+
+-----  Trial 3:  -----
+
+Rules:
+
+Rule 3/1: (8.9/1.3, lift 1.7)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.785]
+
+Rule 3/2: (6.4/1.3, lift 1.5)
+	Arbitralrules_ICSIDAF > 0
+	breaches > 0
+	->  class 0  [0.721]
+
+Rule 3/3: (50.1/10.1, lift 1.5)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	RespondentHDI <= 0.847
+	->  class 1  [0.788]
+
+Rule 3/4: (386.4/191.4, lift 1.0)
+	breaches <= 0
+	->  class 1  [0.505]
+
+Default class: 1
+
+-----  Trial 4:  -----
+
+Rules:
+
+Rule 4/1: (388.1/186.5, lift 1.0)
+	breaches <= 0
+	->  class 0  [0.519]
+
+Rule 4/2: (56.6/16.9, lift 1.4)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	->  class 1  [0.695]
+
+Default class: 0
+
+-----  Trial 5:  -----
+
+Rules:
+
+Rule 5/1: (306/149.5, lift 1.1)
+	breaches <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	aClaimantC_BrowerCN <= 0
+	->  class 0  [0.511]
+
+Rule 5/2: (61.8/22.3, lift 1.2)
+	breaches > 0
+	->  class 1  [0.635]
+
+Rule 5/3: (389.2/193.1, lift 1.0)
+	breaches <= 0
+	->  class 1  [0.504]
+
+Default class: 1
+
+-----  Trial 6:  -----
+
+Rules:
+
+Rule 6/1: (61.4/23.3, lift 1.2)
+	breaches > 0
+	->  class 1  [0.617]
+
+Rule 6/2: (389.6/189.1, lift 1.0)
+	breaches <= 0
+	->  class 1  [0.514]
+
+Default class: 1
+
+-----  Trial 7:  -----
+
+Rules:
+
+Rule 7/1: (390/195, lift 1.0)
+	breaches <= 0
+	->  class 0  [0.500]
+
+Rule 7/2: (54.6/18.8, lift 1.3)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	->  class 1  [0.649]
+
+Default class: 0
+
+-----  Trial 8:  -----
+
+Rules:
+
+Rule 8/1: (38.2/16.3, lift 1.2)
+	aRespondentC_SternB > 0
+	->  class 0  [0.571]
+
+Rule 8/2: (412.8/193, lift 1.0)
+	aRespondentC_SternB <= 0
+	->  class 1  [0.532]
+
+Default class: 1
+
+-----  Trial 9:  -----
+
+Rules:
+
+Rule 9/1: (390.8/193.8, lift 1.0)
+	breaches <= 0
+	->  class 0  [0.504]
+
+Rule 9/2: (60.2/24.6, lift 1.2)
+	breaches > 0
+	->  class 1  [0.589]
+
+Default class: 1
+
+-----  Trial 10:  -----
+
+Rules:
+
+Rule 10/1: (53.4/19.7, lift 1.2)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	->  class 1  [0.627]
+
+Default class: 1
+
+-----  Trial 11:  -----
+
+Rules:
+
+Rule 11/1: (53.2/19.9, lift 1.2)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	->  class 1  [0.621]
+
+Default class: 0
+
+-----  Trial 12:  -----
+
+Rules:
+
+Rule 12/1: (10.4/1.1, lift 1.8)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.829]
+
+Rule 12/2: (372.7/194.3, lift 1.0)
+	Economicsector_TertiaryDElectricity <= 0
+	->  class 0  [0.479]
+
+Rule 12/3: (38.8/6, lift 1.6)
+	breaches > 0
+	RespondentHDI <= 0.847
+	->  class 1  [0.828]
+
+Rule 12/4: (72.3/29.4, lift 1.1)
+	Economicsector_TertiaryDElectricity > 0
+	->  class 1  [0.591]
+
+Rule 12/5: (380.1/172.8, lift 1.0)
+	aClaimantC_BrowerCN <= 0
+	aRespondentC_SternB <= 0
+	->  class 1  [0.545]
+
+Default class: 1
+
+-----  Trial 13:  -----
+
+Rules:
+
+Rule 13/1: (9.8/1.1, lift 1.7)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.825]
+
+Rule 13/2: (398.6/193.8, lift 1.1)
+	breaches <= 0
+	->  class 0  [0.514]
+
+Rule 13/3: (35.6/4.7, lift 1.7)
+	breaches > 0
+	RespondentHDI <= 0.847
+	->  class 1  [0.847]
+
+Default class: 1
+
+-----  Trial 14:  -----
+
+Rules:
+
+Rule 14/1: (9.5/1.1, lift 1.8)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.815]
+
+Rule 14/2: (371.2/192.4, lift 1.0)
+	Economicsector_TertiaryDElectricity <= 0
+	->  class 0  [0.482]
+
+Rule 14/3: (43.9/13.4, lift 1.3)
+	breaches > 0
+	->  class 1  [0.687]
+
+Rule 14/4: (64.8/23.7, lift 1.2)
+	Economicsector_TertiaryDElectricity > 0
+	aClaimantC_BrowerCN <= 0
+	aClaimantC_BeecheyJ <= 0
+	->  class 1  [0.630]
+
+Rule 14/5: (320.1/137.4, lift 1.1)
+	Economicsector_TertiaryFConstruction <= 0
+	RespondentHDI <= 0.865
+	->  class 1  [0.570]
+
+Default class: 0
+
+-----  Trial 15:  -----
+
+Rules:
+
+Rule 15/1: (7.5/1.1, lift 1.6)
+	Arbitralrules_ICSIDAF > 0
+	breaches > 0
+	->  class 0  [0.777]
+
+Rule 15/2: (402.6/195.9, lift 1.1)
+	breaches <= 0
+	->  class 0  [0.513]
+
+Rule 15/3: (33.9/6.9, lift 1.6)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	->  class 1  [0.779]
+
+Default class: 1
+
+-----  Trial 16:  -----
+
+Rules:
+
+Rule 16/1: (19.4/6.3, lift 1.4)
+	Economicsector_TertiaryFConstruction <= 0
+	aRespondentC_ThomasJC > 0
+	->  class 0  [0.660]
+
+Rule 16/2: (33/13.5, lift 1.2)
+	aRespondentC_SternB > 0
+	->  class 0  [0.585]
+
+Rule 16/3: (388.4/179.6, lift 1.1)
+	aRespondentC_SternB <= 0
+	aRespondentC_ThomasJC <= 0
+	->  class 1  [0.537]
+
+Default class: 1
+
+-----  Trial 17:  -----
+
+Rules:
+
+Rule 17/1: (398.7/190.6, lift 1.1)
+	breaches <= 0
+	->  class 0  [0.522]
+
+Rule 17/2: (40.3/13.6, lift 1.4)
+	breaches > 0
+	->  class 1  [0.654]
+
+Rule 17/3: (68.2/28.7, lift 1.2)
+	Economicsector_TertiaryDElectricity > 0
+	aClaimantC_BrowerCN <= 0
+	->  class 1  [0.577]
+
+Default class: 0
+
+-----  Trial 18:  -----
+
+Rules:
+
+Rule 18/1: (12.1, lift 2.2)
+	Arbitralrules_UNCITRAL > 0
+	RespondentHDI > 0.871
+	RespondentHDI <= 0.896
+	->  class 0  [0.929]
+
+Rule 18/2: (24.3/3.7, lift 1.9)
+	breaches <= 0
+	RespondentHDI > 0.896
+	->  class 0  [0.822]
+
+Rule 18/3: (18.2/4.1, lift 1.7)
+	breaches <= 0
+	aRespondentC_SternB > 0
+	->  class 0  [0.745]
+
+Rule 18/4: (85.9/29.4, lift 1.5)
+	Arbitralrules_UNCITRAL > 0
+	breaches <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	aPresidentC_FortierLY <= 0
+	->  class 0  [0.655]
+
+Rule 18/5: (12.8/2.1, lift 1.7)
+	Arbitralrules_UNCITRAL > 0
+	breaches <= 0
+	RespondentHDI > 0.858
+	RespondentHDI <= 0.871
+	->  class 1  [0.792]
+
+Rule 18/6: (33.6/8.7, lift 1.5)
+	breaches > 0
+	->  class 1  [0.727]
+
+Rule 18/7: (47/15.6, lift 1.4)
+	Economicsector_TertiaryDElectricity > 0
+	aRespondentC_SternB <= 0
+	RespondentHDI <= 0.896
+	->  class 1  [0.662]
+
+Rule 18/8: (255.6/106.6, lift 1.2)
+	Arbitralrules_UNCITRAL <= 0
+	aRespondentC_SternB <= 0
+	RespondentHDI <= 0.896
+	->  class 1  [0.582]
+
+Default class: 1
+
+-----  Trial 19:  -----
+
+Rules:
+
+Rule 19/1: (303.9/110.5, lift 1.4)
+	breaches <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	->  class 0  [0.635]
+
+Rule 19/2: (24.7/2.3, lift 2.5)
+	breaches > 0
+	->  class 1  [0.875]
+
+Rule 19/3: (42.2/12, lift 2.0)
+	Economicsector_TertiaryDElectricity > 0
+	->  class 1  [0.705]
+
+Default class: 0
+
+
+Evaluation on training data (451 cases):
+
+Trial	        Rules     
+-----	  ----------------
+	    No      Errors
+
+   0	    12  143(31.7%)
+   1	     5  193(42.8%)
+   2	     2  201(44.6%)
+   3	     4  205(45.5%)
+   4	     2  196(43.5%)
+   5	     3  180(39.9%)
+   6	     2  217(48.1%)
+   7	     2  196(43.5%)
+   8	     2  210(46.6%)
+   9	     2  201(44.6%)
+  10	     1  217(48.1%)
+  11	     1  196(43.5%)
+  12	     5  201(44.6%)
+  13	     3  193(42.8%)
+  14	     5  180(39.9%)
+  15	     3  196(43.5%)
+  16	     3  204(45.2%)
+  17	     3  181(40.1%)
+  18	     8  173(38.4%)
+  19	     3  184(40.8%)
+boost	        172(38.1%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   173    44    (a): class 0
+	   128   106    (b): class 1
+
+
+	Attribute usage:
+
+	100.00%	breaches
+	100.00%	Economicsector_TertiaryDElectricity
+	100.00%	aRespondentC_SternB
+	 98.67%	RespondentHDI
+	 96.90%	aClaimantC_BrowerCN
+	 90.24%	aRespondentC_ThomasJC
+	 88.47%	Arbitralrules_UNCITRAL
+	 84.92%	Arbitralrules_SCC
+	 73.61%	Economicsector_TertiaryFConstruction
+	 23.28%	Economicsector_PrimaryBMining
+	 21.95%	aPresidentC_FortierLY
+	 16.85%	aClaimantC_BeecheyJ
+	 16.63%	Arbitralrules_ICSIDAF
+	 15.30%	aPresidentC_VeederVV
+
+
+Time: 0.0 secs
+

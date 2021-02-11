@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575111142190.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "64079614",
+    "id" : "A438193A",
+    "lastKnownWriteTime" : 1574964960,
+    "last_content_update" : 1575143155307,
+    "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/lab4Functions.R",
+    "project_path" : "lab4Functions.R",
+    "properties" : {
+        "cursorPosition" : "255,49",
+        "scrollLine" : "240"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

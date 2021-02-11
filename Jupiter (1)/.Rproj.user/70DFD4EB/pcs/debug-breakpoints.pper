@@ -1,0 +1,36 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 673,
+                "editor_state" : 2,
+                "function_name" : "modelling",
+                "function_steps" : "",
+                "id" : 1,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 673,
+                "needs_updated_steps" : true,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 2,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 89,
+                "editor_state" : 1,
+                "function_name" : "main",
+                "function_steps" : "3",
+                "id" : 2,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 89,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JupiterCourseWork.R",
+                "state" : 1,
+                "type" : 0
+            }
+        ]
+    }
+}

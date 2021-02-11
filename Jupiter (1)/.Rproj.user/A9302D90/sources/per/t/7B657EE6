@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575308076321.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3418268878",
+    "id" : "7B657EE6",
+    "lastKnownWriteTime" : 1575362927,
+    "last_content_update" : 1575362927963,
+    "path" : "~/PracticalBusinessAnalytics/Jupiter/JupiterCourseWork.R",
+    "project_path" : "JupiterCourseWork.R",
+    "properties" : {
+        "cursorPosition" : "125,9",
+        "scrollLine" : "94"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

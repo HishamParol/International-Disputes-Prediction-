@@ -1,0 +1,66 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 89,
+                "editor_state" : 1,
+                "function_name" : "main",
+                "function_steps" : "",
+                "id" : 1,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : true,
+                "line_number" : 89,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JupiteCourseWork.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 232,
+                "editor_state" : 1,
+                "function_name" : "simpleDT",
+                "function_steps" : "8",
+                "id" : 2,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 232,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 135,
+                "editor_state" : 1,
+                "function_name" : "NdetermineThreshold",
+                "function_steps" : "9",
+                "id" : 4,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 135,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/lab4Functions.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 636,
+                "editor_state" : 1,
+                "function_name" : "modelling",
+                "function_steps" : "5",
+                "id" : 5,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : true,
+                "line_number" : 636,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 1,
+                "type" : 0
+            }
+        ]
+    }
+}

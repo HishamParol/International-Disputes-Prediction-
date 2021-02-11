@@ -1,0 +1,64 @@
+[1] "Random Forest - Importance"
+                                       Strength
+breaches                             28.1957495
+RespondentHDI                        27.4454616
+Economicsector_TertiaryDElectricity  22.2027779
+aClaimantC_HanotiauB                 14.1253019
+Arbitralrules_ICSIDAF                10.6400693
+aRespondentC_SandsP                   8.7042936
+Arbitralrules_ICSID                   8.1953961
+aRespondentC_LandauT                  7.6088017
+Arbitralrules_UNCITRAL                6.2989169
+ClaimantHDI                           5.9984486
+aClaimantC_BrowerCN                   5.6026239
+aPresidentC_VeederVV                  3.4648933
+aClaimantC_BeecheyJ                   2.6248125
+aRespondentC_ThomasJC                 2.4544889
+aClaimantC_AlexandrovSA               1.9351690
+Economicsector_PrimaryBMining         1.8510326
+Arbitralrules_ICC                     1.7160407
+aClaimantC_Grigera                    0.9719580
+aRespondentC_SternB                   0.8080777
+aPresidentC_KaufmannKohlerG           0.0634073
+aClaimantC_OrregoVic                 -1.1517559
+Economicsector_TertiaryFConstruction -1.5705157
+aRespondentC_DouglasZ                -1.6065601
+aClaimantC_FortierLY                 -1.9042980
+aPresidentC_TercierP                 -4.4986534
+aPresidentC_FortierLY                -4.9320935
+Arbitralrules_SCC                    -5.0388361
+aPresidentC_ArmestoJ                 -5.0809902
+[1] "Tree 1:"
+ left daughter    right daughter                                  split var   split point         status         
+ Min.   :  0.00   Min.   :  0.00   ClaimantHDI                         :15   Min.   :0.0000   Min.   :-1.000000  
+ 1st Qu.:  0.00   1st Qu.:  0.00   RespondentHDI                       :10   1st Qu.:0.0000   1st Qu.:-1.000000  
+ Median :  0.00   Median :  0.00   Arbitralrules_ICSID                 : 6   Median :0.0000   Median :-1.000000  
+ Mean   : 38.75   Mean   : 39.25   Economicsector_TertiaryFConstruction: 6   Mean   :0.2998   Mean   :-0.006452  
+ 3rd Qu.: 77.00   3rd Qu.: 78.00   Economicsector_PrimaryBMining       : 5   3rd Qu.:0.5000   3rd Qu.: 1.000000  
+ Max.   :154.00   Max.   :155.00   (Other)                             :35   Max.   :0.9345   Max.   : 1.000000  
+                                   NA's                                :78                                       
+  prediction       
+ Length:155        
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+                   
+[1] "Tree N:"
+ left daughter    right daughter                                  split var    split point         status         
+ Min.   :  0.00   Min.   :  0.00   RespondentHDI                       : 17   Min.   :0.0000   Min.   :-1.000000  
+ 1st Qu.:  0.00   1st Qu.:  0.00   ClaimantHDI                         : 16   1st Qu.:0.0000   1st Qu.:-1.000000  
+ Median :  0.00   Median :  0.00   Arbitralrules_UNCITRAL              : 10   Median :0.0000   Median :-1.000000  
+ Mean   : 50.75   Mean   : 51.25   Economicsector_PrimaryBMining       :  5   Mean   :0.3054   Mean   :-0.004926  
+ 3rd Qu.:101.00   3rd Qu.:102.00   Economicsector_TertiaryFConstruction:  5   3rd Qu.:0.5000   3rd Qu.: 1.000000  
+ Max.   :202.00   Max.   :203.00   (Other)                             : 48   Max.   :0.9335   Max.   : 1.000000  
+                                   NA's                                :102                                       
+  prediction       
+ Length:203        
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+                   

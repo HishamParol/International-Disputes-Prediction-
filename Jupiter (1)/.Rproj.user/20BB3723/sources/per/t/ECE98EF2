@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575111103759.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "581556280",
+    "id" : "ECE98EF2",
+    "lastKnownWriteTime" : 1575199943,
+    "last_content_update" : 1575199943102,
+    "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/JModels.R",
+    "project_path" : "JModels.R",
+    "properties" : {
+        "cursorPosition" : "240,0",
+        "scrollLine" : "222"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

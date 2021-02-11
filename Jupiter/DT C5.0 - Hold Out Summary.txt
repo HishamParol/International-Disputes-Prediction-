@@ -1,0 +1,140 @@
+[1] "Decision Tree - Summary"
+
+Call:
+C5.0.default(x = train[-positionClassOutput], y = factor(train[, positionClassOutput]), trials = 1, rules = TRUE)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Tue Dec 03 08:49:04 2019
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 432 cases (29 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (9, lift 1.9)
+	Arbitralrules_UNCITRAL <= 0
+	breaches <= 0
+	Economicsector_TertiaryDElectricity > 0
+	aClaimantC_FortierLY <= 0
+	RespondentHDI > 0.772
+	RespondentHDI <= 0.816
+	->  class 0  [0.909]
+
+Rule 2: (16/1, lift 1.8)
+	Arbitralrules_ICSID <= 0
+	Arbitralrules_UNCITRAL <= 0
+	breaches <= 0
+	Economicsector_PrimaryBMining <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	RespondentHDI > 0.78
+	->  class 0  [0.889]
+
+Rule 3: (6, lift 1.8)
+	aRespondentC_LandauT > 0
+	ClaimantHDI > 0.908
+	->  class 0  [0.875]
+
+Rule 4: (3, lift 1.7)
+	breaches <= 0
+	Economicsector_PrimaryBMining > 0
+	aPresidentC_ArmestoJ > 0
+	->  class 0  [0.800]
+
+Rule 5: (3, lift 1.7)
+	Economicsector_PrimaryBMining > 0
+	aRespondentC_ThomasJC > 0
+	->  class 0  [0.800]
+
+Rule 6: (3, lift 1.7)
+	Economicsector_TertiaryDElectricity > 0
+	aClaimantC_BrowerCN > 0
+	->  class 0  [0.800]
+
+Rule 7: (7/1, lift 1.6)
+	breaches > 0
+	RespondentHDI > 0.847
+	->  class 0  [0.778]
+
+Rule 8: (52/15, lift 1.5)
+	Arbitralrules_ICSID > 0
+	breaches <= 0
+	Economicsector_PrimaryBMining <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	aClaimantC_BrowerCN <= 0
+	aClaimantC_HanotiauB <= 0
+	aRespondentC_ThomasJC <= 0
+	aRespondentC_DouglasZ <= 0
+	aRespondentC_LandauT <= 0
+	ClaimantHDI <= 0.916
+	->  class 0  [0.704]
+
+Rule 9: (79/28, lift 1.3)
+	Arbitralrules_UNCITRAL > 0
+	breaches <= 0
+	Economicsector_PrimaryBMining <= 0
+	Economicsector_TertiaryDElectricity <= 0
+	Economicsector_TertiaryFConstruction <= 0
+	->  class 0  [0.642]
+
+Rule 10: (361/172, lift 1.1)
+	breaches <= 0
+	->  class 0  [0.523]
+
+Rule 11: (58/10, lift 1.6)
+	Arbitralrules_ICSIDAF <= 0
+	breaches > 0
+	RespondentHDI <= 0.847
+	->  class 1  [0.817]
+
+Rule 12: (17/5, lift 1.3)
+	aPresidentC_FortierLY > 0
+	->  class 1  [0.684]
+
+Rule 13: (392/184, lift 1.0)
+	aRespondentC_SternB <= 0
+	->  class 1  [0.530]
+
+Default class: 0
+
+
+Evaluation on training data (432 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	    13  115(26.6%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   140    69    (a): class 0
+	    46   177    (b): class 1
+
+
+	Attribute usage:
+
+	 98.61%	breaches
+	 90.74%	aRespondentC_SternB
+	 36.81%	Economicsector_TertiaryDElectricity
+	 35.42%	Economicsector_PrimaryBMining
+	 24.07%	Arbitralrules_UNCITRAL
+	 20.83%	RespondentHDI
+	 18.29%	Economicsector_TertiaryFConstruction
+	 15.74%	Arbitralrules_ICSID
+	 13.43%	Arbitralrules_ICSIDAF
+	 13.43%	aRespondentC_LandauT
+	 13.43%	ClaimantHDI
+	 12.73%	aClaimantC_BrowerCN
+	 12.73%	aRespondentC_ThomasJC
+	 12.04%	aClaimantC_HanotiauB
+	 12.04%	aRespondentC_DouglasZ
+	  3.94%	aPresidentC_FortierLY
+	  2.08%	aClaimantC_FortierLY
+	  0.69%	aPresidentC_ArmestoJ
+
+
+Time: 0.0 secs
+

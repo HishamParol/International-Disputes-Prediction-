@@ -1,0 +1,81 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 89,
+                "editor_state" : 1,
+                "function_name" : "main",
+                "function_steps" : "3",
+                "id" : 0,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 89,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/JupiterCourseWork.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 451,
+                "editor_state" : 1,
+                "function_name" : "randomForest",
+                "function_steps" : "9",
+                "id" : 1,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 451,
+                "needs_updated_steps" : true,
+                "package_name" : "",
+                "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 536,
+                "editor_state" : 1,
+                "function_name" : "mlpNeural",
+                "function_steps" : "4,3,4",
+                "id" : 2,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 536,
+                "needs_updated_steps" : true,
+                "package_name" : "",
+                "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 707,
+                "editor_state" : 1,
+                "function_name" : "modelling",
+                "function_steps" : "14",
+                "id" : 3,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 707,
+                "needs_updated_steps" : true,
+                "package_name" : "",
+                "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 134,
+                "editor_state" : 1,
+                "function_name" : "runExperiment",
+                "function_steps" : "5",
+                "id" : 5,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 134,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "C:/Users/graham/OneDrive - University of Surrey/Documents/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 1,
+                "type" : 0
+            }
+        ]
+    }
+}

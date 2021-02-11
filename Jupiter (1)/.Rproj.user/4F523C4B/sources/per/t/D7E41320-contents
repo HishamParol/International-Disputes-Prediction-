@@ -1,0 +1,225 @@
+
+
+#  clears all objects in "global environment"
+rm(list=ls())
+
+# ************************************************
+# Global Environment variables
+# - i.e. available to all functions
+
+DATASET_FILENAME  <- "Damages_Clean.csv"         # Name of input dataset file
+OUTPUT_FIELD      <- "Amountawardedorsettledfor" # Field name of the output class to predict
+OUTPUT_FIELD_LOG  <- "logAmount"                 # Field name of the output class to predict
+
+HOLDOUT           <- 70                   # % split to create TRAIN dataset
+
+SCALE_DATASET     <- TRUE                 # Set to true to scale dataset before ML stage
+OUTLIER_CONF      <- 0.95                 # Confidence p-value for outlier detection
+# Set to negative means analyse but do not replace outliers
+
+TYPE_DISCREET     <- "DISCREET"           # field is discreet (numeric)
+TYPE_ORDINAL      <- "ORDINAL"            # field is continuous numeric
+TYPE_SYMBOLIC     <- "SYMBOLIC"           # field is a string
+TYPE_NUMERIC      <- "NUMERIC"            # field is initially a numeric
+TYPE_IGNORE       <- "IGNORE"             # field is not encoded
+
+DISCREET_BINS     <- 5                    # Number of empty bins to determine discreet
+MAX_LITERALS      <- 55                    # Maximum numner of hotcoding new fields
+
+MYLIBRARIES<-c("outliers",
+               "corrplot",
+               "MASS",
+               "pROC",
+               "formattable",
+               "stats",
+               "caret",
+               "PerformanceAnalytics",
+               "scatterplot3d",
+               "stringi")
+
+# ************************************************
+# Create a linear model for the named input field
+# Visualise the performance error as error-bars
+# Calculate R2, RMSE, MAE
+# INPUT: data frame - datasetTrain - create model
+# data frame - datasetTest - test model
+# String - outputName- name of field to predict
+# String - predictorName - name of predictor field
+# String - tansformer
+# OUTPUT : List - RMSE and R2 are calculated
+# ************************************************
+NscatterPlotError<-function(datasetTrain, datasetTest,
+                            outputName,predictorName, transformer=NULL)
+{
+  #predictor<-ifelse(is.null(transformer), predictorName, paste(transformer,"(", predictorName,")", sep=""))
+  outputForm<-ifelse(is.null(transformer), outputName, paste(transformer,"(", outputName,")", sep=""))
+  formular<-paste(outputForm,"~",predictorName)
+  linearModel<-lm(formular,data=datasetTrain)
+  predictorInput<-data.frame(datasetTest[,predictorName])
+  names(predictorInput)<-predictorName
+  y_actual<-datasetTest[,outputName]
+  y_predicted<-predict(linearModel, predictorInput)
+  RMSE<-round(Nrmse(y_actual,y_predicted),digits=2)
+  mae<-round(Nmae(y_actual,y_predicted),digits=2)
+  r2<-round(Nr2(linearModel),digits=2)
+  
+  #individual difference for each row. i.e. the residuals
+  error<-y_actual-y_predicted
+  # Create a data frame using:
+  # the input predictor (x),
+  # the expected value (actual_y)
+  # and the residuals in the model
+  results<-data.frame(predictorInput,y_actual,error)
+  # order the values for ease of visulisation
+  results<-results[order(y_actual),]
+  # Plots each point from the dataset as a "x"
+  plot(results[,predictorName],results$y_actual,pch=4,
+       ylab=outputName,
+       xlab=predictorName,main="Linear Regression Errors",
+       sub=paste("MAE=",mae,"RMSE=",RMSE,"R2=",r2))
+  #Plot the linear model as a straight line
+  abline(linearModel,col = "blue", lwd=3)
+  # Plot verticle lines from the actual points to the predicted value,
+  # highlighting the error magnitude
+  suppressWarnings(arrows(results[,predictorName], results$y_actual,
+                          results[,predictorName], results$y_actual-results$error,length=0.05,angle=90,code=3,col="red"))  
+  return(
+    list(MAE=mae,
+         RMSE=RMSE,
+         r2=r2))
+} #endof the function called NscatterPlotError()
+
+# ************************************************
+# Create & plot a linear model for all predictors
+# INPUT: data frame - datasetTrain - create model
+# data frame - datasetTest - test model
+# String - outputName- name of field to predict
+# String - predictorName - name of predictor field
+# OUTPUT : None
+# ************************************************
+NplotAllErrors<-function(datasetTrain, datasetTest, outputName)
+{
+  print("RESULTS")
+  for(i in 1:ncol(datasetTest)){
+    xname<-names(datasetTest)[i]
+    if (xname!=outputName){
+      results<-NscatterPlotError(datasetTrain, datasetTest,
+                                 "medv",xname)
+      print(paste("Field=",xname,"r2",results$r2,"RMSE",results$RMSE,"MAE"
+                  ,results$MAE))
+    } #endof the if()
+  } #endof the for()
+} #endof NplotAllErrors()
+
+# ************************************************
+# main() :
+# main entry point to execute analytics
+#
+# INPUT       :   None
+#
+# OUTPUT      :   None
+#
+# Keeps all objects as local to this function
+# ************************************************
+main<-function(){
+  
+  print("Explore Damages Data")
+  print(getwd())
+  
+  # ************************************************
+  # This reads in a CSV file 
+  # The first row of this file has the field names of each column
+  
+  rawCases<-NreadDataset(DATASET_FILENAME)
+
+    
+  # GH
+  modelColumns<-c("Yearofinitiation", "Arbitralrules", "Outcomeoforiginalproceedings",
+                  "RespondentHDI", "ClaimantHDI", "Arbitrators", "Amountclaimed", "Amountawardedorsettledfor",
+                  "Decisions")
+  cases<-rawCases[, (names(rawCases) %in% modelColumns)]
+  
+  
+  #replace NULL and NA
+  cases<-JfillNullValues(cases, "Amountclaimed", 0.0)
+  cases<-JfillNaValues(cases, "Amountclaimed", 0.0)
+  
+  cases<-JfillNullValues(cases, "Amountawardedorsettledfor", 0.0)
+  cases<-JfillNaValues(cases, "Amountawardedorsettledfor", 0.0)
+  
+  cases<-JfillNaValues(cases, "ClaimantHDI", mean(cases[,"ClaimantHDI"], na.rm=TRUE))
+  cases<-JfillNaValues(cases, "RespondentHDI", mean(cases[,"RespondentHDI"], na.rm=TRUE))
+  
+  # ************************************************
+  # Correlation plot of just the decided data
+  
+  ordinalColumns<-c("Yearofinitiation", "RespondentHDI", "ClaimantHDI", "Amountclaimed", "Amountawardedorsettledfor")
+  
+  outcomes<-cases[which(cases[,"Outcomeoforiginalproceedings"] != "Pending"),]
+  outcomes<-cases[which(cases[,"Outcomeoforiginalproceedings"] != "Data not available"),]
+  
+  ordinals<-outcomes[, (names(outcomes) %in% ordinalColumns)]
+  ordinals<-NPREPROCESSING_outlier(ordinals, 0.90)
+  
+  #Cross correlation plot
+  pairs(ordinals)
+  
+  # Now consider only cases that have an amount
+  infavour<-cases[which(cases[,"Outcomeoforiginalproceedings"] == "Decided in favour of investor"),]
+  ordinals <- infavour[, (names(infavour) %in% ordinalColumns)]
+  ordinals<-NPREPROCESSING_outlier(ordinals, 0.90)
+  damagesRatio<-(ordinals[,"Amountawardedorsettledfor"] / ordinals[,"Amountclaimed"])
+  ordinals<-cbind(ordinals, damagesRatio)
+  ordinals[,"damagesRatio"][is.infinite(ordinals[,"damagesRatio"])] <- 0.0
+  
+  print(names(ordinals))
+
+  training_records<-round(nrow(ordinals)*(70/100))
+  training_data <- ordinals[1:training_records,]
+  testing_data = ordinals[-(1:training_records),]
+
+  # Experimental
+  results<-NscatterPlotError(training_data, testing_data, OUTPUT_FIELD,"Amountclaimed")
+  print(paste("Field=RespondentHDI","MAE",results$MAE,"r2",results$r2,"RMSE",results$RMSE))  
+  
+
+  # Respondent HDI
+  results<-NscatterPlotError(training_data, testing_data, "damagesRatio", "RespondentHDI")
+  print(paste("Field=RespondentHDI","MAE",results$MAE,"r2",results$r2,"RMSE",results$RMSE))
+  
+
+  # Respondent HDI
+  results<-NscatterPlotError(training_data, testing_data, "damagesRatio", "ClaimantHDI")
+  print(paste("Field=ClaimantHDI","MAE",results$MAE,"r2",results$r2,"RMSE",results$RMSE))
+  
+    
+  print("Explore End")
+  
+
+} #endof main()
+
+# ************************************************
+# This is where R starts execution
+
+# clears the console area
+cat("\014")
+
+library(pacman)
+pacman::p_load(char=MYLIBRARIES,install=TRUE,character.only=TRUE)
+
+#This [optionally] sets working directory
+#setwd("/Users/nickryman-tubb/Documents/My Stuff/University of Surrey/UOS Teaching/MANM354 - 2019/Labs/lab3 - preprocessing/code")
+
+#Load additional R script files provide for this lab
+source("lab2functions.R")
+source("lab4functions.R")
+source("lab4dataPrep.R")
+source("JData_Preparation.R")
+
+set.seed(123)
+
+# ************************************************
+main()
+
+print("end")
+

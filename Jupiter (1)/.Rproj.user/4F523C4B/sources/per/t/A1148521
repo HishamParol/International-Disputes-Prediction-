@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575049998115.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2643493092",
+    "id" : "A1148521",
+    "lastKnownWriteTime" : 1575028045,
+    "last_content_update" : 1575028045,
+    "path" : "~/PracticalBusinessAnalytics/Jupiter/JModels.R",
+    "project_path" : "JModels.R",
+    "properties" : {
+        "cursorPosition" : "175,50",
+        "scrollLine" : "149"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

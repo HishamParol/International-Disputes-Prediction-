@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575022405968.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2508940976",
+    "id" : "62169CA0",
+    "lastKnownWriteTime" : 1575027480,
+    "last_content_update" : 1575027480749,
+    "path" : "~/PracticalBusinessAnalytics/Jupiter/JExploreLinear.R",
+    "project_path" : "JExploreLinear.R",
+    "properties" : {
+        "cursorPosition" : "170,85",
+        "scrollLine" : "150"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

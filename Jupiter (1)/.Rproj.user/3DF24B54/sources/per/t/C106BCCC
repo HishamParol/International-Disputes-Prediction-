@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575022433311.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2202333853",
+    "id" : "C106BCCC",
+    "lastKnownWriteTime" : 1574964960,
+    "last_content_update" : 1574964960,
+    "path" : "~/PracticalBusinessAnalytics/Jupiter/JData_Preparation.R",
+    "project_path" : "JData_Preparation.R",
+    "properties" : {
+        "cursorPosition" : "67,77",
+        "scrollLine" : "57"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

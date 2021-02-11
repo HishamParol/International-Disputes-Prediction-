@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575020445488.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4064654559",
+    "id" : "C0D7DCB0",
+    "lastKnownWriteTime" : 1574964960,
+    "last_content_update" : 1574964960,
+    "path" : "~/PracticalBusinessAnalytics/Jupiter/JExtractDamages.R",
+    "project_path" : "JExtractDamages.R",
+    "properties" : {
+        "cursorPosition" : "21,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,81 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 196,
+                "editor_state" : 1,
+                "function_name" : "main",
+                "function_steps" : "35",
+                "id" : 12,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 196,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JExploreLinear.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 175,
+                "editor_state" : 1,
+                "function_name" : "main",
+                "function_steps" : "25",
+                "id" : 13,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 175,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JExploreLinear.R",
+                "state" : 1,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 635,
+                "editor_state" : 2,
+                "function_name" : "modelling",
+                "function_steps" : "",
+                "id" : 14,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 635,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JModels.R",
+                "state" : 2,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 89,
+                "editor_state" : 2,
+                "function_name" : "main",
+                "function_steps" : "",
+                "id" : 15,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 89,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JupiteCourseWork.R",
+                "state" : 2,
+                "type" : 0
+            },
+            {
+                "editor_line_number" : 89,
+                "editor_state" : 1,
+                "function_name" : "JdataPreparation",
+                "function_steps" : "30",
+                "id" : 16,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : true,
+                "line_number" : 89,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "~/PracticalBusinessAnalytics/Jupiter/JData_Preparation.R",
+                "state" : 1,
+                "type" : 0
+            }
+        ]
+    }
+}
